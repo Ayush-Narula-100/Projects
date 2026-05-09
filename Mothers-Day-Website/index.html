@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OurFlix • Mother's Day</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: url('1774601057806.png') center/cover fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+    .hero {
+      min-height: 90vh;
+      background: transparent;
+    }
+    .soft-card {
+      transition: transform 0.32s ease, box-shadow 0.32s ease;
+      box-shadow: 0 20px 40px rgba(219, 39, 119, 0.12);
+    }
+    .soft-card:hover {
+      transform: translateY(-8px);
+    }
+    .section-card {
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(251, 207, 232, 0.8);
+      backdrop-filter: blur(14px);
+    }
+    .modal {
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body id="top" class="text-slate-900 overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/85 backdrop-blur-md border-b border-pink-200 py-4 px-8 flex items-center justify-between shadow-sm shadow-pink-200/20">
+    <div class="flex items-center gap-4">
+      <img src="1774601057806.png" alt="Mother's Day" class="h-12 w-12 rounded-3xl object-cover shadow-sm">
+      <div>
+        <h1 class="text-3xl font-black text-rose-600">Happy Mother's Day</h1>
+        <p class="text-xs uppercase tracking-[0.3em] text-pink-500">Hope you find this interesting 😉</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6 text-sm font-medium text-slate-600">
+      <a href="#top" class="hover:text-rose-600">Home</a>
+      <a href="#memories" class="hover:text-rose-600">Memories</a>
+      <a href="#songs" class="hover:text-rose-600">Our Songs</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero relative flex items-end px-8 pb-24">
+    <div class="max-w-3xl py-28">
+      <p class="mb-4 text-sm uppercase tracking-[0.32em] text-rose-500">Love You So Much ❤️</p>
+      <h2 class="text-5xl md:text-6xl font-black leading-tight text-slate-900 mb-6">Happy Mother's Day</h2>
+      <p class="text-lg text-slate-700 max-w-2xl mb-8">A gentle tribute to warmth, memories, and the music that makes every moment special.</p>
+      <button onclick="playHero()" class="inline-flex items-center gap-3 rounded-full bg-rose-600 px-8 py-4 text-white shadow-lg shadow-rose-200/70 hover:bg-rose-700 transition">
+        <i class="fas fa-heart"></i> Play Story
+      </button>
+    </div>
+  </section>
+
+  <!-- Content Rows -->
+  <div class="px-8 pb-20 pt-24 space-y-14 relative z-10">
+
+    <!-- Row 1: Our Memories -->
+    <section id="memories" class="rounded-[2rem] border border-pink-100 bg-white/85 p-6 shadow-lg shadow-pink-200/30">
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <h3 class="text-2xl font-semibold text-slate-900">Our Beautiful Memories</h3>
+          <span class="text-sm uppercase tracking-[0.24em] text-rose-500">Swipe to explore</span>
+        </div>
+        <div class="flex gap-4 overflow-x-auto pb-6 snap-x scrollbar-thin scrollbar-track-pink-100 scrollbar-thumb-rose-300">
+          <div onclick="showContent(1)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">First Year ✨</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Second Year 🎉</div>
+          </div>
+          <div onclick="showContent(3)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Third Year 🤗</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Fourth Year 💕</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Fifth Year 😁</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Sixth Year 🙂</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Seventh Year 🙌</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Eighth Year 😚</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Ninth Year 🥰</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Tenth Year 🤣</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Eleventh Year 🥰</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Twelfth Year 😮</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Thirteenth Year 🎉</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Fourteenth Year 🤐</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4"> Fifteenth Year 😍</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Sixteenth Year 🎉</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Seventeenth Year 🎉</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Eighteenth Year 🎉</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Nineteenth Year 🤑</div>
+          </div>
+          <div onclick="showContent(2)" class="soft-card section-card min-w-[280px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Twentieth Year 😱</div>
+          </div>
+          
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Row 2: Our Songs -->
+    <section id="songs" class="rounded-[2rem] border border-pink-100 bg-white/85 p-6 shadow-lg shadow-pink-200/30">
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <h3 class="text-2xl font-semibold text-slate-900">Our Songs</h3>
+          <span class="text-sm uppercase tracking-[0.24em] text-rose-500">Tap to open</span>
+        </div>
+        <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-track-pink-100 scrollbar-thumb-rose-300">
+          <a href="https://www.youtube.com/watch?v=MXSEr_hg7iE" class="soft-card section-card min-w-[260px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">❤️My Sunshine❤️</div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=mt9xg0mmt28" class="soft-card section-card min-w-[260px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Tum se hi</div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=II2EO3Nw4m0" class="soft-card section-card min-w-[260px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Badtameez Dill 😉</div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=yDv0WSgXJVg&list=RDGMEM2j3yRsqu_nuzRLnHd2bMVA&start_radio=1&rv=II2EO3Nw4m0" class="soft-card section-card min-w-[260px] rounded-[1.75rem] overflow-hidden cursor-pointer">
+            <img src="1774601057806.png" class="w-full">
+            <div class="p-4">Senorita 😘</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+    <div class="modal bg-zinc-950 rounded-2xl max-w-4xl w-full mx-4 overflow-hidden">
+      <div class="flex justify-end p-4">
+        <button onclick="closeModal()" class="text-3xl hover:text-red-500">✕</button>
+      </div>
+      <div id="modal-content" class="px-8 pb-8"></div>
+    </div>
+  </div>
+
+  <script>
+    const localBackground = '1774601057806.png';
+    document.body.style.backgroundImage = `url('${localBackground}')`;
+
+    function playHero() {
+      const localVideo = 'test.mp4';
+      document.getElementById('modal-content').innerHTML = `
+        <h2 class="text-4xl font-bold mb-6">Our Love Story - Trailer</h2>
+        <div class="aspect-video bg-black rounded-xl overflow-hidden">
+          <video width="100%" height="100%" controls autoplay playsinline muted>
+            <source src="${localVideo}" type="video/mp4">
+            Your browser does not support HTML video.
+          </video>
+        </div>
+      `;
+      document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function showContent(id) {
+      let html = '';
+      if (id === 1) {
+        html = `<h2 class="text-3xl mb-4">First Date ✨</h2><img src="1774601057806.png" class="rounded-xl w-full">`;
+      } else if (id === 2) {
+        html = `<h2 class="text-3xl mb-4">Trip to Mountains 🏔️</h2><img src="1774601057806.png" class="rounded-xl w-full">`;
+      } else if (id === 3) {
+        html = `<h2 class="text-3xl mb-4">Our Sunset 💕</h2><img src="1774601057806.png" class="rounded-xl w-full">`;
+      }
+      document.getElementById('modal-content').innerHTML = html;
+      document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function showSong(id) {
+      document.getElementById('modal-content').innerHTML = `
+        <h2 class="text-3xl mb-6">Now Playing ❤️</h2>
+        <div class="aspect-video bg-black rounded-xl overflow-hidden">
+          <iframe width="100%" height="100%" 
+            src="https://www.youtube.com/embed/0i0z2r3z3zA" 
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+      `;
+      document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+
+    // Close modal with ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") closeModal();
+    });
+  </script>
+</body>
+</html>
